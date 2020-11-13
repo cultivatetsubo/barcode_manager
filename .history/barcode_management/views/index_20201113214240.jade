@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  <input type="text">
+  <input type="button" value="検索">
+  <input type="checkbox" name="check" value="1">リストにない場合バーコードを作製する
+block add
+  <div id="form_area">
+  <input type="text" id="inputform_0" placeholder="フォーム-0">
+  </div>
+  <input type="button" value="フォーム追加" onclick="addForm()">

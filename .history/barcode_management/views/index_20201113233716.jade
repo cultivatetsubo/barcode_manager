@@ -1,0 +1,28 @@
+extends layout
+
+block content
+
+  h1= title
+  p Welcome to #{title}
+  <input type="text">
+  <input type="button" value="検索">
+  <input type="checkbox" name="check" value="1">リストにない場合バーコードを作製する
+  <div id="form_area">
+  <input type="text" id="inputform_0" placeholder="フォーム-0">
+  </div>
+  <div>
+  <script>
+  var i = 1;
+  function addForm() {
+  var input_data=document.createElement('input');
+  input_data.type='text';
+  input_data.id="input form_"+i;
+  input_data.placeholder= 'form'+i;
+  console.log(input_data);
+  var parent=document.getElementById("form_area");
+  parent.appendChild(input_data);
+  i++;
+  }
+  </script>
+  <input type="button" value="フォーム追加" onclick="addForm()">
+  </div>
